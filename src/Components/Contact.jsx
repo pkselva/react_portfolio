@@ -8,9 +8,9 @@ const Contact = () => {
         Feel free to reach out through the form below.
       </p>
 
-      <form className="flex flex-col gap-4 w-full max-w-md bg-[#1a1a1a] p-6 rounded-2xl shadow-lg">
+      <form className="grid grid-cols-12 gap-4 w-full max-w-md bg-[#1a1a1a] p-6 rounded-2xl shadow-lg">
         {/* Name */}
-        <div>
+        <div className="col-span-6">
           <label className="block mb-2 text-sm font-semibold">Name</label>
           <input
             type="text"
@@ -20,7 +20,7 @@ const Contact = () => {
         </div>
 
         {/* Email */}
-        <div>
+        <div className="col-span-6">
           <label className="block mb-2 text-sm font-semibold">Email</label>
           <input
             type="email"
@@ -30,7 +30,7 @@ const Contact = () => {
         </div>
 
         {/* Subject */}
-        <div>
+        <div className="col-span-6">
           <label className="block mb-2 text-sm font-semibold">Subject</label>
           <input
             type="text"
@@ -40,7 +40,7 @@ const Contact = () => {
         </div>
 
         {/* Phone */}
-        <div>
+        <div className="col-span-6">
           <label className="block mb-2 text-sm font-semibold">Phone Number</label>
           <input
             type="tel"
@@ -50,7 +50,7 @@ const Contact = () => {
         </div>
 
         {/* Message */}
-        <div>
+        <div className="col-span-12">
           <label className="block mb-2 text-sm font-semibold">Message</label>
           <textarea
             rows="4"
@@ -60,12 +60,14 @@ const Contact = () => {
         </div>
 
         {/* Submit Button */}
-        <button
-          type="submit"
-          className="mt-4 w-full bg-blue-600 hover:bg-blue-700 transition-all py-2 rounded-lg font-semibold"
-        >
-          Send Message
-        </button>
+        <div className="col-span-6">
+          <button
+            type="submit"
+            className="mt-4 w-full bg-blue-600 hover:bg-blue-700 transition-all py-2 rounded-lg font-semibold"
+          >
+            Send Message
+          </button>
+        </div>
       </form>
     </div>
   );
