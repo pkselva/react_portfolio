@@ -19,7 +19,7 @@ function Skills() {
       <div className='flex gap-5 items-center justify-center'>
         {skillsCard.map((val, idx) => {
           return (
-            <div key={idx} className='px-8 w-[150px] flex flex-col items-center py-[25px] border-[1px] hover:border-[#c9f31d] hover:text-[#c9f31d] border-[#ffffff1a] bg-[#1f1f1f] rounded-[14px]'>
+            <div key={idx} className='px-8 cursor-pointer w-[150px] flex flex-col items-center py-[25px] border-[1px] hover:border-[#c9f31d] hover:text-[#c9f31d] border-[#ffffff1a] bg-[#1f1f1f] rounded-[14px]'>
               <div>
                 <img src={val.img} alt={val.label} width={60} height={60} />
               </div>
