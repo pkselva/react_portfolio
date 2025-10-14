@@ -12,7 +12,7 @@ function NavigationBar() {
   ];
 
   return (
-    <div className="bg-[#1f1f1f] flex items-center justify-between px-4 py-3">
+    <div className="bg-[#1f1f1f] flex items-center justify-between px-4 py-3 sticky top-0 z-1">
 
       <div className="flex-shrink-0">
         <img src="/logo.png" alt="logo" width={150} height={40} />

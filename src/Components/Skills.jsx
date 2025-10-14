@@ -14,7 +14,7 @@ function Skills() {
   ]
 
   return (
-    <div className='p-8 bg-[#070707]'>
+    <div id='skills' className='p-8 bg-[#070707]'>
       <div className='text-gray-400 mb-6 text-center'>My Skills</div>
       <div className='flex items-center justify-center'>
         <div className='grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8 gap-5 items-center justify-center'>
