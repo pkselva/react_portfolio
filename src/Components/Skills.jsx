@@ -16,17 +16,21 @@ function Skills() {
   return (
     <div className='p-8 bg-[#070707]'>
       <div className='text-gray-400 mb-6 text-center'>My Skills</div>
-      <div className='flex gap-5 items-center justify-center'>
-        {skillsCard.map((val, idx) => {
-          return (
-            <div key={idx} className='px-8 cursor-pointer w-[150px] flex flex-col items-center py-[25px] border-[1px] hover:border-[#c9f31d] hover:text-[#c9f31d] border-[#ffffff1a] bg-[#1f1f1f] rounded-[14px]'>
-              <div>
-                <img src={val.img} alt={val.label} width={60} height={60} />
+      <div className='flex items-center justify-center'>
+        <div className='grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8 gap-5 items-center justify-center'>
+          {skillsCard.map((val, idx) => {
+            return (
+              <div key={idx} className='px-8 cursor-pointer w-full sm:w-[150px] flex flex-col justify-center items-center py-[25px] 
+                         border border-[#ffffff1a] bg-[#1f1f1f] rounded-[14px] 
+                         hover:border-[#c9f31d] hover:text-[#c9f31d] transition'>
+                <div className='w-[30px] sm:w-[60px]'>
+                  <img src={val.img} alt={val.label} />
+                </div>
+                <div className='leading-[28px] text-[20px] mt-[15px] text-white'>{val.label}</div>
               </div>
-              <h1 className='leading-[28px] text-[20px] mt-[15px] text-white'>{val.label}</h1>
-            </div>
-          )
-        })}
+            )
+          })}
+        </div>
       </div>
     </div>
   )
