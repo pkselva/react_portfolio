@@ -13,7 +13,7 @@ function About() {
   ]
 
   const contactDetails = [
-    { icon: <FaRegEnvelope />, label: "Email us", value: "gowshik.webdev@gmail.com" },
+    { icon: <FaRegEnvelope />, label: "Email me", value: "gowshik.webdev@gmail.com" },
     { icon: <FiPhone />, label: "Make A Call", value: "+91 9894309301" },
   ]
 
