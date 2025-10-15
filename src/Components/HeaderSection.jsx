@@ -11,15 +11,14 @@ function HeaderSection() {
           <b className='text-[#c9f31d]'>Gowshik S</b>
           <br />web developer
         </h1>
-        <p className='max-w-100 opacity-65 font-[400] text-[12px] sm:text-[14px] md:text-[16px] leading-[20px] sm:leading-[24px] md:leading-[30px]'>
-          We denounce with righteous indignation dislike
-          demoralized by the charms of pleasure
+        <p className='opacity-65 font-[400] text-[12px] sm:text-[14px] md:text-[16px] leading-[20px] sm:leading-[24px] md:leading-[30px]'>
+          Passionate about building responsive and efficient applications, Strong problem-solving and teamwork abilities. 
         </p>
         <div className='flex flex-col sm:flex-row gap-4 w-full items-center sm:gap-9 mt-8 text-[12px] sm:text-[14px] md:text-[16px]'>
           <button className='bg-[#c9f31d] px-9 py-2.5  text-[#070707] font-[600] rounded-[15px] cursor-pointer '>
             <a href="#projects">View My Project</a>
           </button>
-          <button className='underline text-[14px] cursor-pointer'>
+          <button className='underline text-[14px] cursor-pointer hover:text-[#c9f31d] hover:transition'>
             Download Resume
           </button>
         </div>
