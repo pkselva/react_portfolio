@@ -1,7 +1,12 @@
 import { useState } from "react";
+import logo from '../assets/svg/logo2.svg'
 
 function NavigationBar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  function onScroll() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
   const navList = [
     { link: "#home", value: "Home" },
@@ -14,8 +19,13 @@ function NavigationBar() {
   return (
     <div className="bg-[#1f1f1f] flex items-center justify-between px-4 py-3 sticky top-0 z-1">
 
-      <div className="flex-shrink-0">
-        <img src="/logo.png" alt="logo" width={150} height={40} />
+      <div className="flex-shrink-0 flex gap-3 items-center cursor-pointer" onClick={onScroll}>
+        <div>
+          <img src={logo} alt="logo" width={40} height={50} />
+        </div>
+        <div className="text-white text-3xl font-[Gramatika]">
+          My Portfolio
+        </div>
       </div>
 
       <div className="hidden md:flex justify-end flex-1">
