@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logo from '../assets/svg/logo2.svg'
+import sideBarIcon from '../assets/svg/sidebar-tottler.svg'
 
 function NavigationBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,7 +46,7 @@ function NavigationBar() {
           onClick={() => setIsOpen(!isOpen)}
           className="bg-[#c9f31d] rounded-full w-[45px] h-[45px] flex justify-center items-center"
         >
-          <img src="/sidebar-tottler.svg" alt="sidebar" />
+          <img src={sideBarIcon} alt="sidebar" />
         </button>
       </div>
 
