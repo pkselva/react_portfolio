@@ -5,6 +5,7 @@ import About from '../Components/About'
 import Skills from '../Components/Skills'
 import Projects from '../Components/Projects'
 import Contact from '../Components/Contact'
+import Certifications from '../Components/Certifications'
 
 function Layout() {
   return (
@@ -14,6 +15,7 @@ function Layout() {
       <About />
       <Skills />
       <Projects />
+      <Certifications />
       <Contact />
     </>
   )
