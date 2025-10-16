@@ -1,16 +1,23 @@
-import React from 'react'
+import htmlIcon from "../assets/png/html.png";
+import cssIcon from "../assets/png/css.png";
+import jsIcon from "../assets/png/js.png";
+import reactIcon from "../assets/png/React.png";
+import bootstrapIcon from "../assets/png/bootstrap.png";
+import javaIcon from "../assets/png/java.png";
+import mysqlIcon from "../assets/png/mysql.png";
+import mongodbIcon from "../assets/png/mongodb.png";
 
 function Skills() {
 
   const skillsCard = [
-    { img: "./html.png", label: "HTML" },
-    { img: "./css.png", label: "CSS" },
-    { img: "./js.png", label: "JavaScript" },
-    { img: "./React.png", label: "React" },
-    { img: "./bootstrap.png", label: "Bootstrap" },
-    { img: "./java.png", label: "Java" },
-    { img: "./mysql.png", label: "SQL" },
-    { img: "./mongodb.png", label: "MongoDB" },
+    { img: htmlIcon, label: "HTML" },
+    { img: cssIcon, label: "CSS" },
+    { img: jsIcon, label: "JavaScript" },
+    { img: reactIcon, label: "React" },
+    { img: bootstrapIcon, label: "Bootstrap" },
+    { img: javaIcon, label: "Java" },
+    { img: mysqlIcon, label: "SQL" },
+    { img: mongodbIcon, label: "MongoDB" },
   ]
 
   return (
