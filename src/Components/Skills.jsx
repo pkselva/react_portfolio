@@ -21,8 +21,10 @@ function Skills() {
   ]
 
   return (
-    <div id='skills' className='p-6 sm:p-12 md:p-16 bg-[#111]'>
-      <div className='text-gray-400 mb-6 text-center'>My Skills</div>
+    <div id='skills' className='p-6 sm:p-10 md:p-14 bg-[#111] text-center'>
+      <div className='text-gray-400 mb-2 text-sm md:text-base'>Explore</div>
+      <h1 className="text-2xl md:text-3xl font-bold text-[#c9f31d] mb-4 md:mb-8">My Skills</h1>
+
       <div className='flex items-center justify-center'>
         <div className='grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6 items-center justify-center'>
           {skillsCard.map((val, idx) => {

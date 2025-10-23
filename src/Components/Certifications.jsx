@@ -10,9 +10,9 @@ function Certifications() {
     ]
 
     return (
-        <div className='bg-[#111] py-12 sm:py-16 md:py-20 px-6 sm:px-10 text-white text-center'>
+        <div id='certificatons' className='bg-[#111] p-6 sm:p-10 md:p-14 text-white text-center'>
             <div className='text-gray-400 mb-2 text-[12px] sm:text-sm md:text-base'>Explore My</div>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8">Certifications</h1>
+            <h1 className="text-2xl md:text-3xl font-bold text-[#c9f31d] mb-4 sm:mb-6 lg:mb-8">Certifications</h1>
             <div className='w-full sm:w-4/5 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8'>
                 {certificationDetails.map((detail, idx) => (
                     <div

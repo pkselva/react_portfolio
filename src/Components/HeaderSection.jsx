@@ -2,7 +2,7 @@ import React from 'react'
 
 function HeaderSection() {
   return (
-    <div className='bg-[#111] text-white py-12 sm:py-16 md:py-20 px-10'>
+    <div className='bg-[#111] text-white p-6 sm:p-10 md:p-14'>
       <div className='max-w-120'>
         <div className='opacity-35 font-[400] text-2xl sm:text-3xl md:text-[45px] mb-1'>
           Hello, i’m
