@@ -4,8 +4,8 @@ import HeaderSection from '../Components/HeaderSection'
 import About from '../Components/About'
 import Skills from '../Components/Skills'
 import Projects from '../Components/Projects'
-import Contact from '../Components/Contact'
 import Certifications from '../Components/Certifications'
+import Footer from '../Components/Footer'
 
 function Layout() {
   return (
@@ -16,7 +16,7 @@ function Layout() {
       <Skills />
       <Projects />
       <Certifications />
-      <Contact />
+      <Footer />
     </>
   )
 }
