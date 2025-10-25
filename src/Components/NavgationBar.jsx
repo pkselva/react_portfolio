@@ -65,14 +65,14 @@ function NavigationBar() {
 
       <div className={`fixed top-[65px] left-0 w-full bg-[#1f1f1f]/95 backdrop-blur-md flex flex-col items-center transition-all duration-300 overflow-hidden ${isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}>
         {navList.map((nav, idx) => (
-          <a
+          <Link
             key={idx}
             href={nav.link}
             onClick={() => handleNavClick(nav.link)}
             className="py-3 w-full text-center text-white text-base font-medium hover:bg-[#c9f31d] hover:text-black transition-all"
           >
             {nav.value}
-          </a>
+          </Link>
         ))}
       </div>
     </nav>
