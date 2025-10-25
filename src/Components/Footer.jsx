@@ -1,20 +1,20 @@
-import { FaGithub, FaInstagram, FaLinkedin, FaPinterestP } from "react-icons/fa6";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa6";
 
 const socialLinks = [
   {
-    name: 'Twitter',
+    name: 'Github',
     icon: <FaGithub size={20} />,
-    href: 'https://twitter.com',
+    href: 'https://github.com/gowshiksankar',
   },
   {
-    name: 'Facebook',
+    name: 'Linkedin',
     icon: <FaLinkedin size={20} />,
-    href: 'https://facebook.com',
+    href: 'https://www.linkedin.com/in/gowshikdev/',
   },
   {
     name: 'Instagram',
     icon: <FaInstagram size={20} />,
-    href: 'https://instagram.com',
+    href: 'https://www.instagram.com/harrygowshik?igsh=MWRnMjd2NDdjODA1Yw==',
   },
 ];
 
