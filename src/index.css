@@ -1,7 +1,13 @@
 @import "tailwindcss";
+
 @font-face {
   font-family: "Gramatika";
   src: url("./assets/fonts/Gramatika-Black.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
+}
+
+body,
+#root {
+  font-family: "DM Sans", sans-serif;
 }
