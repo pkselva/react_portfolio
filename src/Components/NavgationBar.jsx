@@ -6,10 +6,6 @@ import { Link } from "react-router-dom";
 function NavigationBar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  function onScroll() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-
   const navList = [
     { link: "#home", value: "Home" },
     { link: "#about", value: "About" },
@@ -35,7 +31,7 @@ function NavigationBar() {
       className="bg-[#1f1f1f] flex items-center justify-between px-4 sm:px-8 md:px-12 py-3 sticky top-0 z-50 shadow-md">
       <div
         className="flex items-center gap-3 cursor-pointer flex-shrink-0"
-        onClick={onScroll}
+        onClick={() => handleNavClick("#home")}
       >
         <img src={logo} alt="logo" className="w-8 sm:w-10 h-full" />
         <h1
@@ -65,14 +61,14 @@ function NavigationBar() {
 
       <div className={`fixed top-[65px] left-0 w-full bg-[#1f1f1f]/95 backdrop-blur-md flex flex-col items-center transition-all duration-300 overflow-hidden ${isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}>
         {navList.map((nav, idx) => (
-          <a
+          <Link
             key={idx}
             href={nav.link}
             onClick={() => handleNavClick(nav.link)}
             className="py-3 w-full text-center text-white text-base font-medium hover:bg-[#c9f31d] hover:text-black transition-all"
           >
             {nav.value}
-          </a>
+          </Link>
         ))}
       </div>
     </nav>
