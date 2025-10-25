@@ -18,7 +18,7 @@ function About() {
   ]
 
   return (
-    <div id="about" className='bg-[#070707] p-6 sm:p-10 md:p-14 text-white'>
+    <div id="about" className='scroll-mt-14 sm:scroll-mt-16 bg-[#070707] p-6 sm:p-10 md:p-14 text-white'>
       <div className='w-full lg:w-5/7'>
         <div className='text-gray-400 mb-3 text-sm md:text-base'>About Me</div>
         <h2 className='mb-6 text-2xl sm:text-4xl md:text-[45px] leading-9 sm:leading-11 md:leading-13 font-[500]'>

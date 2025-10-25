@@ -21,7 +21,7 @@ function Skills() {
   ]
 
   return (
-    <div id='skills' className='p-6 sm:p-10 md:p-14 bg-[#111] text-center'>
+    <div id='skills' className='scroll-mt-14 sm:scroll-mt-16 p-6 sm:p-10 md:p-14 bg-[#111] text-center'>
       <div className='text-gray-400 mb-2 text-sm md:text-base'>Explore</div>
       <h1 className="text-2xl md:text-3xl font-bold text-[#c9f31d] mb-4 md:mb-8">My Skills</h1>
 
