@@ -13,7 +13,7 @@ function ProjectCard({ icon, title, description, features }) {
     >
 
       <div className="col-span-4 flex items-center gap-4 sm:gap-6 w-full">
-        <div className="text-[40px] lg:text-[80px] text-gray-400 flex-shrink-0">
+        <div className="text-[40px] lg:text-[80px] text-gray-400 shrink-0">
           {icon}
         </div>
         <h2 className="text-base sm:text-lg lg:text-2xl leading-7 sm:leading-8 tracking-[1px] sm:tracking-[1.5px] uppercase font-semibold">

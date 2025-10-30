@@ -21,11 +21,11 @@ function About() {
     <div id="about" className='scroll-mt-14 sm:scroll-mt-16 bg-[#070707] p-6 sm:p-10 md:p-14 text-white'>
       <div className='w-full lg:w-5/7'>
         <div className='text-gray-400 mb-3 text-sm md:text-base'>About Me</div>
-        <h2 className='mb-6 text-2xl sm:text-4xl md:text-[45px] leading-9 sm:leading-11 md:leading-13 font-[500]'>
+        <h2 className='mb-6 text-2xl sm:text-4xl md:text-[45px] leading-9 sm:leading-11 md:leading-13 font-medium'>
           A Passionate Developer <br /> {"Creating "}
           <span className='text-[#c9f31d]'>Full-Stack Web Applications</span>
         </h2>
-        <p className='opacity-65 font-[400] text-[12px] sm:text-[14px] md:text-[16px] leading-[20px] sm:leading-[24px] md:leading-[30px] mb-8'>
+        <p className='opacity-65 font-normal text-[12px] sm:text-[14px] md:text-[16px] leading-5 sm:leading-6 md:leading-[30px] mb-8'>
           Aspiring Full Stack Developer with a solid foundation in core Java, Spring Boot, SQL, React.js, Node.js, HTML, CSS, and MongoDB. Passionate about building responsive and efficient applications, Strong problem-solving and teamwork abilities. Eager to contribute and grow in a dynamic development team.
         </p>
         <div className="max-w-[620px]">
@@ -33,7 +33,7 @@ function About() {
             {skills.map((value, idx) => (
               <div key={idx} className="flex gap-2">
                 <MdDone className="text-[#c9f31d] text-base sm:text-lg md:text-2xl" />
-                <h1 className='text-[14px] sm:text-base md:text-xl font-[500]'>{value}</h1>
+                <h1 className='text-[14px] sm:text-base md:text-xl font-medium'>{value}</h1>
               </div>
             ))}
           </div>

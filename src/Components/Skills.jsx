@@ -30,7 +30,7 @@ function Skills() {
           {skillsCard.map((val, idx) => {
             return (
               <div key={idx} className='px-4 sm:px-6 lg:px-7 cursor-pointer w-full sm:w-[150px] flex flex-col justify-center items-center py-3 sm:py-5 lg:py-6 border border-[#ffffff1a] bg-[#1f1f1f] rounded-[14px] hover:border-[#c9f31d] text-white hover:text-[#c9f31d] transform hover:scale-102 hover:-translate-y-1 transition duration-300 ease-in-out'>
-                <div className='w-[40px] md:w-[60px]'>
+                <div className='w-10 md:w-[60px]'>
                   <img src={val.img} alt={val.label} />
                 </div>
                 <div className='leading-4 sm:leading-5 md:leading-7 text-[14px] sm:text-base md:text-xl mt-2 md:mt-4'>{val.label}</div>
