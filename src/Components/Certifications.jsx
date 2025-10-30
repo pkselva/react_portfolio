@@ -15,9 +15,9 @@ function Certifications() {
                 {certificationDetails.map((detail, idx) => (
                     <div
                         key={idx}
-                        className='border-[2px] hover:border-[#c9f31d] transition duration-500 rounded-3xl sm:rounded-4xl flex flex-col items-center gap-4 sm:gap-6 p-4 sm:p-5 md:p-6'
+                        className='border-2 hover:border-[#c9f31d] transition duration-500 rounded-3xl sm:rounded-4xl flex flex-col items-center gap-4 sm:gap-6 p-4 sm:p-5 md:p-6'
                     >
-                        <div className='text-[14px] sm:text-lg md:text-2xl font-[500]'>
+                        <div className='text-[14px] sm:text-lg md:text-2xl font-medium'>
                             {detail.title}
                         </div>
                         <div className="flex justify-center">

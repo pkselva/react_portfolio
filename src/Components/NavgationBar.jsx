@@ -30,13 +30,13 @@ function NavigationBar() {
     <nav
       className="bg-[#1f1f1f] flex items-center justify-between px-4 sm:px-8 md:px-12 py-3 sticky top-0 z-50 shadow-md">
       <div
-        className="flex items-center gap-3 cursor-pointer flex-shrink-0"
+        className="flex items-center gap-3 cursor-pointer shrink-0"
         onClick={() => handleNavClick("#home")}
       >
         <img src={logo} alt="logo" className="w-8 sm:w-10 h-full" />
         <h1
           className="text-white text-2xl sm:text-3xl font-semibold tracking-wide font-[Gramatika]">
-          My Portfolio
+          Gowshik
         </h1>
       </div>
 
