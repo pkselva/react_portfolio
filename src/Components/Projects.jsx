@@ -1,9 +1,10 @@
-import { FaTractor, FaBook, FaTint } from 'react-icons/fa';
 import ProjectCard from '../shared/ProjectCard';
+import { LiaTintSolid } from 'react-icons/lia';
+import { LuBookText, LuTractor } from 'react-icons/lu';
 
 const projectData = [
   {
-    icon: <FaTractor />,
+    icon: <LuTractor className='text-[#c9f31d]' />,
     title: 'FARMING MACHINERY RENTAL SYSTEM',
     description: 'Developed a Farming Machinery Rental System, improving operational efficiency for farmers. Collaborated with a team, conducted testing, and provided ongoing updates.',
     features: [
@@ -13,7 +14,7 @@ const projectData = [
     ]
   },
   {
-    icon: <FaBook />,
+    icon: <LuBookText className='text-[#c9f31d]' />,
     title: 'LIBRARY MANAGEMENT SYSTEM',
     description: 'Developed a Library Management System using Java. Designed to efficiently manage book inventory and support patron interactions with a command-line interface.',
     features: [
@@ -23,7 +24,7 @@ const projectData = [
     ]
   },
   {
-    icon: <FaTint />,
+    icon: <LiaTintSolid className='text-[#c9f31d]' />,
     title: "Blood Donor System",
     description: "Developed a comprehensive Blood Donor Management System to streamline donor registration, blood bank inventory, and recipient matching. Aims to enhance efficiency and reduce manual errors.",
     features: [
