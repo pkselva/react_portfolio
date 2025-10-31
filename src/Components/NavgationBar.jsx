@@ -12,6 +12,7 @@ function NavigationBar() {
     { link: "#skills", value: "Skills" },
     { link: "#projects", value: "Projects" },
     { link: "#certifications", value: "Certifications" },
+    { link: "#contact", value: "Contact" },
   ];
 
   const handleNavClick = (link) => {
