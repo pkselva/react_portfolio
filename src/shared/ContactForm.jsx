@@ -7,22 +7,36 @@ function ContactForm() {
     const [whatsapp, setWhatsapp] = useState("");
     const [message, setMessage] = useState("");
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if (whatsapp) {
-            const phone = whatsapp.replace(/\D/g, "");
-            window.open(`https://wa.me/${phone}`, "_blank");
-        } else if (email) {
-            window.location.href = `mailto:${email}`;
-        } else {
-            alert("Please enter your email or WhatsApp number.");
+        if (!message || (!email && !whatsapp)) {
+            alert("Please fill in your message and either email or WhatsApp.");
+            return;
         }
 
-        setEmail("");
-        setWhatsapp("");
-        setMessage("");
+        try {
+            const response = await fetch("http://localhost:5000/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email, whatsapp, message }),
+            });
+
+            const data = await response.json();
+            if (data.success) {
+                alert("Message sent successfully!");
+                setEmail("");
+                setWhatsapp("");
+                setMessage("");
+            } else {
+                alert(data.message);
+            }
+        } catch (error) {
+            console.error(error);
+            alert("Failed to send message. Please try again later.");
+        }
     };
+
 
     return (
         <form
