@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaRegCommentDots, FaWhatsapp } from "react-icons/fa6";
 import { MdMailOutline } from "react-icons/md";
+import { Bounce, toast, ToastContainer } from "react-toastify";
 
 function ContactForm() {
     const [email, setEmail] = useState("");
@@ -11,12 +12,12 @@ function ContactForm() {
         e.preventDefault();
 
         if (!message || (!email && !whatsapp)) {
-            alert("Please fill in your message and either email or WhatsApp.");
+            toast.info("Please fill in your message and either email or WhatsApp.");
             return;
         }
 
         try {
-            const response = await fetch(`${"https://gowshikportfolio.onrender.com/" || "http://localhost:5000/"}api/contact`, {
+            const response = await fetch("https://gowshikportfolio.onrender.com/api/contact", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, whatsapp, message }),
@@ -24,16 +25,16 @@ function ContactForm() {
 
             const data = await response.json();
             if (data.success) {
-                alert(data.message);
+                toast.success(data.message);
                 setEmail("");
                 setWhatsapp("");
                 setMessage("");
             } else {
-                alert(data.message);
+                toast.info("Something went wrong. Please try again later.");
             }
         } catch (error) {
             console.error(error);
-            alert("Failed to send message. Please try again later.");
+            toast.error("Failed to send message. Please try again later.");
         }
     };
 
@@ -86,6 +87,12 @@ function ContactForm() {
             >
                 Let's Connect
             </button>
+            <ToastContainer
+                position="bottom-left"
+                utoClose={5000}
+                theme="colored"
+                transition={Bounce}
+            />
         </form>
     )
 }
