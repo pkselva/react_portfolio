@@ -4,6 +4,7 @@ const contactSchema = new mongoose.Schema(
     {
         email: {
             type: String,
+            required: [true, "Email is required."],
             trim: true,
             validate: {
                 validator: function (v) {
@@ -15,13 +16,15 @@ const contactSchema = new mongoose.Schema(
         },
         whatsapp: {
             type: String,
+            required: [true, "Whatsapp Number is required."],
             trim: true,
             validate: {
                 validator: function (v) {
                     if (!v) return true;
-                    return /^\d{10}$/.test(v);
+                    return /^[6-9]\d{9}$/.test(v);
                 },
-                message: "Invalid WhatsApp number. It must be exactly 10 digits.",
+                message:
+                    "Invalid WhatsApp number. It must start with 6–9 and be exactly 10 digits.",
             },
         },
         message: {
