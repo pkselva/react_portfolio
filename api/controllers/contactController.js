@@ -1,4 +1,4 @@
-import Contact from "../models/contact";
+import Contact from "../models/contact.js";
 
 export const submitContact = async (req, res) => {
     try {
