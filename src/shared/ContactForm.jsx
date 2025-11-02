@@ -11,8 +11,8 @@ function ContactForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if (!message || (!email && !whatsapp)) {
-            toast.info("Please fill in your message and either email or WhatsApp.");
+        if (!email || !whatsapp || !message) {
+            toast.info("Please provide email, WhatsApp number, and message.");
             return;
         }
 
@@ -25,13 +25,19 @@ function ContactForm() {
 
             const data = await response.json();
             if (data.success) {
-                toast.success(data.message);
+                toast.success("Thank you for reaching out! I'll get back to you soon.");
                 setEmail("");
                 setWhatsapp("");
                 setMessage("");
-            } else {
-                toast.info("Something went wrong. Please try again later.");
+                return;
             }
+
+            if (data.errors) {
+                Object.values(data.errors).forEach((msg) => toast.warning(msg));
+                return;
+            }
+
+            toast.error(data.message || "Something went wrong. Try again.");
         } catch (error) {
             console.error(error);
             toast.error("Failed to send message. Please try again later.");
@@ -49,7 +55,7 @@ function ContactForm() {
                     <MdMailOutline size={18} className="sm:size-6" />
                 </div>
                 <input
-                    type="email"
+                    type="text"
                     placeholder="Your Email Address"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -88,9 +94,14 @@ function ContactForm() {
                 Let's Connect
             </button>
             <ToastContainer
-                position="bottom-left"
-                utoClose={5000}
-                theme="colored"
+                position={"top-right"}
+                autoClose={4000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                pauseOnHover
+                draggable
+                theme="dark"
                 transition={Bounce}
             />
         </form>
