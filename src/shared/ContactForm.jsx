@@ -24,7 +24,7 @@ function ContactForm() {
 
             const data = await response.json();
             if (data.success) {
-                alert("Message sent successfully!");
+                alert(data.message);
                 setEmail("");
                 setWhatsapp("");
                 setMessage("");
