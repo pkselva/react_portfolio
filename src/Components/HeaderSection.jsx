@@ -1,7 +1,9 @@
+import myPhoto from "../assets/png/myphoto.png"
+
 function HeaderSection() {
   return (
-    <div className='bg-[#111] text-white p-6 sm:p-10 md:p-14'>
-      <div className='max-w-120'>
+    <div className='bg-[#070707] text-white flex justify-between items-center'>
+      <div className='max-w-120 ml-6 sm:ml-10 md:ml-14'>
         <div className='opacity-35 font-normal text-2xl sm:text-3xl md:text-[45px] mb-1'>
           Hello, i’m
         </div>
@@ -30,6 +32,9 @@ function HeaderSection() {
           </a>
         </div>
 
+      </div>
+      <div className="px-6 sm:px-10 md:px-14 pt-6 sm:pt-10 md:pt-14">
+        <img src={myPhoto} alt="myPhoto" width={300} height="100%"/>
       </div>
     </div>
   )
