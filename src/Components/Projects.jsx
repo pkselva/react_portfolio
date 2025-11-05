@@ -37,7 +37,7 @@ const projectData = [
 
 function Projects() {
   return (
-    <div id='projects' className='scroll-mt-14 sm:scroll-mt-16 flex flex-col items-center p-6 sm:p-10 md:p-14 bg-[#070707] text-white'>
+    <div id='projects' className='scroll-mt-14 sm:scroll-mt-16 flex flex-col items-center p-6 sm:p-10 md:p-14 bg-[#111] text-white'>
       <div className='text-gray-400 mb-2 text-sm md:text-base'>Explore</div>
       <h1 className="text-2xl md:text-3xl font-bold text-[#c9f31d] mb-4 sm:mb-0">My Projects</h1>
 

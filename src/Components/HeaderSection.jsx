@@ -33,7 +33,7 @@ function HeaderSection() {
         </div>
 
       </div>
-      <div className="px-6 sm:px-10 md:px-14 pt-6 sm:pt-10 md:pt-14">
+      <div className="pt-6 sm:pt-10 md:pt-14">
         <img src={myPhoto} alt="myPhoto" width={300} height="100%"/>
       </div>
     </div>

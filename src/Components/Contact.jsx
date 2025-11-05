@@ -29,7 +29,7 @@ function Contact() {
     return (
         <div
             id="contact"
-            className="scroll-mt-14 sm:scroll-mt-16 bg-[#070707] text-white p-6 sm:p-10 md:p-14"
+            className="scroll-mt-14 sm:scroll-mt-16 bg-[#111] text-white p-6 sm:p-10 md:p-14"
         >
             <div className="flex flex-col md:flex-row gap-5 md:gap-10">
                 <div className="w-full">
