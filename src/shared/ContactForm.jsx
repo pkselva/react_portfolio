@@ -2,11 +2,13 @@ import { useState } from "react";
 import { FaRegCommentDots, FaWhatsapp } from "react-icons/fa6";
 import { MdMailOutline } from "react-icons/md";
 import { Bounce, toast, ToastContainer } from "react-toastify";
+import { ImSpinner2 } from "react-icons/im";
 
 function ContactForm() {
     const [email, setEmail] = useState("");
     const [whatsapp, setWhatsapp] = useState("");
     const [message, setMessage] = useState("");
+    const [loading, setLoading] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -17,6 +19,7 @@ function ContactForm() {
         }
 
         try {
+            setLoading(true);
             const response = await fetch("https://gowshikportfolio.onrender.com/api/contact", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -29,21 +32,18 @@ function ContactForm() {
                 setEmail("");
                 setWhatsapp("");
                 setMessage("");
-                return;
-            }
-
-            if (data.errors) {
+            } else if (data.errors) {
                 Object.values(data.errors).forEach((msg) => toast.warning(msg));
-                return;
+            } else {
+                toast.error(data.message || "Something went wrong. Try again.");
             }
-
-            toast.error(data.message || "Something went wrong. Try again.");
         } catch (error) {
             console.error(error);
             toast.error("Failed to send message. Please try again later.");
+        } finally {
+            setLoading(false);
         }
     };
-
 
     return (
         <form
@@ -75,6 +75,7 @@ function ContactForm() {
                     className="w-full h-10 sm:h-full rounded-xl bg-transparent border-2 border-gray-600 text-white text-sm sm:text-base focus:border-[#c9f31d] outline-none p-3 transition-all"
                 />
             </div>
+
             <div className="flex items-start gap-2 md:gap-3 w-full">
                 <div className="flex mt-1 items-center justify-center min-w-8 min-h-8 w-8 h-8 sm:min-w-12 sm:min-h-12 sm:w-12 sm:h-12 rounded-full text-black text-lg transition-all shrink-0 bg-[#c9f31d]">
                     <FaRegCommentDots size={18} className="sm:size-6" />
@@ -89,10 +90,20 @@ function ContactForm() {
 
             <button
                 type="submit"
-                className="bg-[#c9f31d] text-[#070707] w-full mx-auto font-semibold px-7 py-2 rounded-xl sm:rounded-[15px] cursor-pointer hover:bg-[#b4da1a] transition-all duration-300 sm:w-auto"
+                disabled={loading}
+                className={`flex items-center justify-center gap-2 bg-[#c9f31d] text-[#070707] w-full mx-auto font-semibold px-7 py-2 rounded-xl sm:rounded-[15px] cursor-pointer transition-all duration-300 sm:w-auto
+                    ${loading ? "opacity-70 cursor-not-allowed" : "hover:bg-[#b4da1a]"}`}
             >
-                Let's Connect
+                {loading ? (
+                    <>
+                        <ImSpinner2 className="animate-spin" size={18} />
+                        Sending...
+                    </>
+                ) : (
+                    "Let's Connect"
+                )}
             </button>
+
             <ToastContainer
                 position={"top-right"}
                 autoClose={4000}
@@ -105,7 +116,7 @@ function ContactForm() {
                 transition={Bounce}
             />
         </form>
-    )
+    );
 }
 
-export default ContactForm
+export default ContactForm;
