@@ -60,7 +60,7 @@ function NavigationBar() {
         <img src={sideBarIcon} alt="menu toggle" className="w-4 h-4" />
       </button>
 
-      <div className={`fixed top-[65px] left-0 w-full bg-[#1f1f1f]/95 backdrop-blur-md flex flex-col items-center transition-all duration-300 overflow-hidden ${isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}>
+      <div className={`fixed top-14 md:top-16 left-0 w-full bg-[#1f1f1f]/90 backdrop-blur-md flex flex-col items-center transition-all duration-300 overflow-hidden ${isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}>
         {navList.map((nav, idx) => (
           <Link
             key={idx}
