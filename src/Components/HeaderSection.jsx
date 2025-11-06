@@ -19,15 +19,10 @@ function HeaderSection() {
           <br />
           web developer
         </h1>
-        <p className='opacity-65 font-normal text-[12px] sm:text-[14px] md:text-[16px] leading-4 sm:leading-6 md:leading-[30px] max-w-[900px]'>
-          <span className="block sm:hidden">
-            Passionate, efficient, collaborative, and solution-driven developer.
-          </span>
-          <span className="hidden sm:inline">
-            Passionate about developing responsive, high-performing web applications with a focus on clean and efficient code.{" "}
-            <span className="sm:hidden lg:inline">
-              Skilled in problem-solving and known for strong collaboration within team environments.
-            </span>
+        <p className='opacity-65 font-normal text-[10px] sm:text-[14px] md:text-[16px] leading-4 sm:leading-6 md:leading-[30px] max-w-[900px]'>
+          Passionate about developing responsive, high-performing web applications with a focus on clean and efficient code.{" "}
+          <span className="hidden lg:inline">
+            Skilled in problem-solving and known for strong collaboration within team environments.
           </span>
         </p>
 
